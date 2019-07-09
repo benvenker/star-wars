@@ -1,0 +1,12 @@
+.card {
+  /* height: 500px;
+  width: 30%; */
+  padding: 20px 30px 20px 30px;
+  /* display: flex; */
+}
+
+hr {
+  height: 5px;
+  background-color: red;
+  border: none;
+}
