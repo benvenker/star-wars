@@ -3,7 +3,7 @@ import './Card.css';
 
 const Card = ({ name, birthYear, starships }) => {
   return (
-    <div className="card dib ma2 grow bw2 shadow-3">
+    <div className="card dib ma2 bw2 shadow-3">
       <div>
         <h2 className="f2">{name}</h2>
         <hr></hr>
@@ -15,7 +15,7 @@ const Card = ({ name, birthYear, starships }) => {
         </ul>
         <h3>Starships</h3>
         <ul>
-          <li>{starships}</li>
+          <li><a href={starships}>Link</a></li>
         </ul>
       </div>
     </div>
