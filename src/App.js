@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import CardList from './CardList';
-import { people } from './people';
+// import { people } from './people';
 
 class App extends React.Component {
   constructor() {
@@ -15,16 +15,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`https://swapi.co/api/people/`)
+    fetch(`https://swapi.co/api/people/?page=2`)
       .then(response => response.json())
-      .then(people => this.setState({ people: people }));
+      .then(people => this.setState({ people: people.results }));
   }
 
   render() {
     return (
       <div>
         <Header />,
-      <CardList people={people} />
+      <CardList people={this.state.people} />
       </div>
     );
   }
